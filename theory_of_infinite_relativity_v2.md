@@ -120,3 +120,8 @@ The period ($T$) of a local clock is derived directly from its spatial radius ($
 $$T = 2\pi r^{3/2}$$
 
 * **Time Dilation Mechanical Reality:** The total velocity vector allocation ($v^2 = v_\theta^2 + v_r^2$) is bounded by the local medium threshold ($c$). When a system is accelerated at a high radial velocity ($v_r$), its tangential spin component ($v_\theta$) must mathematically decrease to balance the vector. Because the internal rotational velocity drops, the internal loop takes longer to complete a single orbit. The local machinery literally slows down, causing the observed deceleration of time.
+
+
+By Andrew J. Lees
+
+* AI was used in the testing, refinement & communication of this theory
