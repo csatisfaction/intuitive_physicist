@@ -17,6 +17,20 @@ $$r = \frac{v^2}{a}$$
 * **$v$ (Velocity):** The tangential velocity of the relational sweep.
 * **$a$ (Acceleration):** The localized, dynamic acceleration gradient of the field **at radius $r$**.
 
+### 1.1 The Relational Sign of Velocity (Intrinsic Spin)
+
+To preserve absolute minimalism, the tangential velocity ($v$) is defined not as a vector requiring an external coordinate grid, but as a **signed relational scalar** ($+v$ or $-v$) relative to the local medium's acceleration gradient. 
+
+Because velocity is squared within the foundational primitive, the localized spatial footprint ($r$) remains perfectly invariant under a sign flip:
+
+$$r = \frac{(+v)^2}{a} = \frac{(-v)^2}{a}$$
+
+* **Physical Invariance:** A clockwise loop and a counter-clockwise loop carve an identical spatial footprint ($r$) and possess an identical geometric torque profile ($M_{\text{geom}}$). 
+* **Relational Spin:** The sign is entirely relational. Positive ($+v$) denotes spinning in alignment with the local vortex flow of the parent system; negative ($-v$) denotes spinning against it. 
+* **Algebraic Boundary Interfacing:** When two independent loops interface, their relative tangential velocity difference ($\Delta v_\theta$) collapses from complex vector trigonometry to a starkly simple algebraic subtraction:
+
+$$\Delta v_\theta = v_{\theta, \text{system}} - v_{\theta, \text{incoming}}$$
+
 ---
 
 ## II. The Universal Medium (Universal Gearing)
