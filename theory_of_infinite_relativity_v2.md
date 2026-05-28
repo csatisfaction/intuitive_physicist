@@ -17,6 +17,20 @@ $$r = \frac{v^2}{a}$$
 * **$v$ (Velocity):** The tangential velocity of the relational sweep.
 * **$a$ (Acceleration):** The localized, dynamic acceleration gradient of the field **at radius $r$**.
 
+### 1.1 The Relational Sign of Velocity (Intrinsic Spin)
+
+To preserve absolute minimalism, the tangential velocity ($v$) is defined not as a vector requiring an external coordinate grid, but as a **signed relational scalar** ($+v$ or $-v$) relative to the local medium's acceleration gradient. 
+
+Because velocity is squared within the foundational primitive, the localized spatial footprint ($r$) remains perfectly invariant under a sign flip:
+
+$$r = \frac{(+v)^2}{a} = \frac{(-v)^2}{a}$$
+
+* **Physical Invariance:** A clockwise loop and a counter-clockwise loop carve an identical spatial footprint ($r$) and possess an identical geometric torque profile ($M_{\text{geom}}$). 
+* **Relational Spin:** The sign is entirely relational. Positive ($+v$) denotes spinning in alignment with the local vortex flow of the parent system; negative ($-v$) denotes spinning against it. 
+* **Algebraic Boundary Interfacing:** When two independent loops interface, their relative tangential velocity difference ($\Delta v_\theta$) collapses from complex vector trigonometry to a starkly simple algebraic subtraction:
+
+$$\Delta v_\theta = v_{\theta, \text{system}} - v_{\theta, \text{incoming}}$$
+
 ---
 
 ## II. The Universal Medium (Universal Gearing)
@@ -59,7 +73,7 @@ $$Q_{\text{geom}} = a \cdot r^2 \implies k_e \equiv 1$$
 
 Rather than distinct, fundamental "building blocks" of matter, the particles of the Standard Model are classified purely by their rotational architecture, torque density, and relationship to the local medium:
 
-* **The Photon (The Excitation):** Not a localized loop or a permanent stall, but a transient wave excitation—a literal "pluck"—propagating natively across the photon-scale boundary layer at the medium's threshold velocity ($c$). It carries zero geometric torque (mass) because it is a ripple *of* the medium, not a structured knot *within* it.
+* **The Photon (The Excitation):** A relational boundary layer operating at the medium's maximum propagation threshold ($v \rightarrow c$) with an infinitesimal acceleration gradient ($a \rightarrow 0$). According to the primary primitive ($r = v^2/a$), this forces its spatial footprint into an extended, macro-scale radius ($r \rightarrow \infty$), manifesting as an almost perfectly flat rotational disk. Because its local acceleration gradient approaches zero, its geometric torque profile collapses ($M_{\text{geom}} = a \cdot r^2 \rightarrow 0$), mechanically accounting for its apparent lack of rest mass. 
 * **The Electron (The High-Gear Harmonic):** A stable, localized loop locked at a wide, low-torque radius. It sits at the first major outer harmonic resonance node of the field. Because its torque profile is low, its spatial footprint is wide, making its boundary field highly sensitive to electrostatic interactions (surface plucks).
 * **The Proton/Quark Cluster (The High-Torque Core):** A hyper-dense, deeply wound system of maximum-torque, minimum-radius loops ($r \rightarrow 10^{-15}\text{ m}$). It is a localized "traffic jam" where the flow has packed down to the structural limit of the medium, manifesting macroscopically as immense inertial mass.
 * **The Neutrino (The Unraveled Ghost):** A minimal-torque, loosely wound loop structure. Because its geometric footprint lacks the high-torque steepness or the specific harmonic phase profiles required to mesh with atomic structures, it fails to trigger local state-change thresholds. It glides through the medium unhindered, leaving only an infinitesimal background whisper of field interference.
@@ -120,3 +134,8 @@ The period ($T$) of a local clock is derived directly from its spatial radius ($
 $$T = 2\pi r^{3/2}$$
 
 * **Time Dilation Mechanical Reality:** The total velocity vector allocation ($v^2 = v_\theta^2 + v_r^2$) is bounded by the local medium threshold ($c$). When a system is accelerated at a high radial velocity ($v_r$), its tangential spin component ($v_\theta$) must mathematically decrease to balance the vector. Because the internal rotational velocity drops, the internal loop takes longer to complete a single orbit. The local machinery literally slows down, causing the observed deceleration of time.
+
+
+By Andrew J. Lees
+
+* AI was used in the testing, refinement & communication of this theory
