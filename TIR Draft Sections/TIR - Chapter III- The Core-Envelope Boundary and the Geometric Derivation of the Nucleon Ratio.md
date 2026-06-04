@@ -1,4 +1,4 @@
-# Chapter III: The Core-Envelope Boundary and the Geometric Derivation of the Nucleon Ratio
+## Chapter III: The Core-Envelope Boundary and the Geometric Derivation of the Nucleon Ratio
 
 ### Abstract
 

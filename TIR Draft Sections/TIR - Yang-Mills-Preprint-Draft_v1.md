@@ -1,22 +1,4 @@
-
-
-# Front-End Bookend: Abstract & Executive Summary
-
-### Abstract
-
-This paper presents a coordinate-free, multi-scale hydrodynamic //** is "hydrodynamic the best term here (maybe it is), or is it too limiting or evocative for the first sentence? **// resolution to the Yang-Mills existence and mass gap problem. Standard quantum field theory treats mass as an intrinsic, non-spatial scalar parameter, leaving the physical mechanism behind the non-zero vacuum ground state ($\Delta E > 0$) mathematically unresolved. By replacing arbitrary dimensional constants with a primary relational primitive ($r = v^2/a$), we redefine mass as a **Geometric Torque Profile** ($M_{\text{geom}} = v^2 \cdot r$) representing the localized spatial resistance of a fluid medium. //** should we not that this is not a return to aether, but rather a more sophisticated and mathematically rigorous approach?**//
-
-We demonstrate that when a localized wavefront accelerates to the medium’s maximum propagation threshold ($v \to c$), the system undergoes velocity saturation, entering a permanent, non-dissipative rotational phase-lock (velocity stall). To maintain structural stability without undergoing catastrophic destructive self-interference, the boundary path of this stall must satisfy strict cyclic perimeter harmonics ($2\pi r = n\lambda$), quantizing the system's net angular momentum to whole-integer steps of the medium's baseline phase-coherence unit ($\hbar$). Evaluated at the fundamental ground state ($n=1$), the system yields a strict, non-zero minimum mass threshold:
-
-$$M_{\text{min}} = \sqrt{\hbar \cdot c}$$
-
-$$\Delta E_{\text{gap}} = \sqrt{\hbar \cdot c^5} > 0$$
-
-Because $\hbar$ and $c$ are finite physical properties of the underlying medium //** are they finite physical properties or consistently dervied properties?**//, a continuous energy spectrum down to absolute zero is mechanically impossible. This geometric framework satisfies the required four-dimensional gauge group symmetries ($\mathbb{R}^4$) via an antisymmetric kinematic matrix, while resolving the historic infinity errors of quantum gravity through a scale-invariant, level-decoupled fractal architecture.
-
----
-
-# Section I: The Geometric Ontology of Mass and the Disarming of Classical Conventions
+## Section I: The Geometric Ontology of Mass and the Disarming of Classical Conventions
 
 ## 1.1 The Definition of Geometric Mass
 
@@ -48,7 +30,7 @@ Because the Gravitational Constant ($G$) is merely an arbitrary conversion facto
 
 $$\mu = M \implies [M] = \frac{\text{meters}^3}{\text{seconds}^2}$$
 
----
+--- 
 
 ## 1.3 Preexistence in Geometrized General Relativity
 
@@ -60,10 +42,9 @@ $$\text{Mass } (M) \equiv \text{Distance } (L) \quad [\text{expressed in meters}
 
 Therefore, the geometric ontology established in this paper is not a speculative, derivative parlor trick. It is the explicit physical mechanism underlying the mathematical simplifications already favored by the highest tiers of general relativity. By removing the arbitrary baseline constant $G$ from the outset, we are simply allowing the geometry of the field strength tensor to speak for itself, natively deriving the mass gap threshold directly from the medium’s structural dimensions.
 
+--- 
 
----
-
-# Section II: The Quantization of the Boundary Loop (The Wave Lens)
+## Section II: The Quantization of the Boundary Loop (The Wave Lens)
 
 To formalize the quantization rules within this framework, the field is mapped onto a scale-invariant, nested fractal architecture wherein the universe is ordered into discrete, self-similar tiers separated by sharp spatial thresholds. We evaluate the interface between the sub-quantum vacuum floor ($\text{Level}\ N-1$) and the stable matter floor ($\text{Level}\ N$).
 
@@ -138,9 +119,9 @@ A stable, localized wave stall cannot exist as a continuous mathematical smear d
 Consequently, any gauge field tracking the excitation of this medium will observe a stark, quantized energy gap ($\approx 1.22\ \text{GeV}$) between the idle vacuum background and the first stable manifested loop, corresponding tightly with the empirically observed $\sim 1.5\ \text{GeV}$ lightest glueball state of pure Yang-Mills lattice QCD. The mass gap is verified not as an abstract mathematical anomaly, but as a direct geometric consequence of boundary layer phase-locking and fractal scale-transmutation within a multi-tiered medium.
 
 
----
+--- 
 
-# Section III: Mapping to Multi-Scale 4D Gauge Fields and Matrix Harmonics
+## Section III: Mapping to Multi-Scale 4D Gauge Fields and Matrix Harmonics
 
 ## 3.1 The Endogenous 4D Kinematic Matrix
 
@@ -158,7 +139,7 @@ $$K_{\mu\nu} = \begin{pmatrix} 0 & v_x & v_y & v_z \\ -v_x & 0 & \omega_z & -\om
 
 When this matrix undergoes a Lorentz-type rotation or gauge transformation, a stable, non-vanishing mapping to a observable particle state occurs **only at discrete eigenvalues of the matrix**. These eigenvalues correspond exactly to the cyclic perimeter harmonics derived in Section II ($2\pi r = n\lambda$). If the matrix components do not satisfy these precise harmonic nodes, the determinant collapses, mathematically representing the immediate phase-cancellation and radiant dissolution of the un-matched wave structure within the medium.
 
----
+--- 
 
 ## 3.2 The Principle of Level-Decoupling (Tier-Specific Spacetimes)
 
@@ -170,7 +151,7 @@ $$\mathbb{M}^4_{\text{Total}} = \dots \oplus \mathbb{M}^4_{N-1} \oplus \mathbb{M
 * **The Matter Spacetime ($\mathbb{M}^4_{N}$):** The human-scale floor, where the medium's propagation threshold is locked to our perceived speed of light ($c \approx 3 \times 10^8\text{ m/s}$).
 * **The Cosmological Spacetime ($\mathbb{M}^4_{N+1}$):** The galactic/cosmic scale ($\sim 10^{26}\text{ m}$), where the gargantuan spatial dimensions force local orbital clocks to run at a hyper-slow, evolutionary pace relative to our layer.
 
----
+--- 
 
 ## 3.3 Resolution of the Gauge Quantization Paradox
 
@@ -178,10 +159,9 @@ By confining the 4D vector space approximation to a single, isolated layer, the 
 
 In this framework, as an analytical probe moves downward past the boundary of Level $N$, the spacetime manifold $\mathbb{M}^4_{N}$ smoothly untethers and decrypts. The smooth field transitions into the discrete, granular kinematics of the Level $N-1$ medium. The math never blows up into an infinite singularity because the finite physical dimensions of the sub-quantum wave harmonics provide a hard, structural floor. The gauge group symmetries remain perfectly intact within our layer because they are tracking the macro-harmonics of a beautifully organized //** is "beautifully organized" the right appropriate language here? **// multi-tiered fluid machine.
 
----
+--- 
 
-
-# Section IV: Discussion & Conclusion
+## Section IV: Discussion & Conclusion
 
 ## 4.1 Discussion: Structural Implications and Empirical Symmetries
 
@@ -199,7 +179,7 @@ By anchoring physical reality to a bidirectional fractal architecture, the Infin
 
 Through this Scale-Agnostic, coordinate-free approach, the historic schism between the smooth spacetime of relativity and the pixelated thresholds of quantum mechanics is permanently bridged. The universe ceases to be a collection of disconnected, arbitrary mathematical constants and is revealed as a single, beautifully integrated, multi-scale mechanical engine.
 
----
+--- 
 
 ### Repository Deployment Note
 

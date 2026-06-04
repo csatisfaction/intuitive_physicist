@@ -1,4 +1,4 @@
-# The Kinematic Manifesto: A Relational Purification of the Continuum
+## The Kinematic Manifesto: A Relational Purification of the Continuum
 
 ### Preamble
 
