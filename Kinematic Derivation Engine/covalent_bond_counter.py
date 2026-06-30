@@ -1,0 +1,105 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+class SpinPairedBondingFabric:
+    def __init__(self, x_bounds=(-3.0, 3.0), y_bounds=(-2.5, 2.5), resolution=90, c=1.0):
+        self.res_x = resolution + 20
+        self.res_y = resolution
+        self.c = float(c)
+        self.x = np.linspace(x_bounds[0], x_bounds[1], self.res_x)
+        self.y = np.linspace(y_bounds[0], y_bounds[1], self.res_y)
+        self.X, self.Y = np.meshgrid(self.x, self.y)
+        
+        self.VX = np.zeros_like(self.X)
+        self.VY = np.zeros_like(self.Y)
+        self.core_mask = np.zeros_like(self.X, dtype=bool)
+
+    def embed_atom(self, cx, cy, spin_dir, p_rad=0.3, e_rad=1.0, p_vel=0.95, e_vel=0.65):
+        """
+        Embeds a complete Concentric Hydrogen Atom (Proton + Electron Shield).
+        spin_dir: 1.0 for CCW (Spin Up), -1.0 for CW (Spin Down)
+        """
+        dx = self.X - cx
+        dy = self.Y - cy
+        r = np.sqrt(dx**2 + dy**2)
+        angle = np.arctan2(dy, dx)
+        
+        # Proton Track
+        p_mask = np.abs(r - p_rad) < 0.08
+        self.core_mask[p_mask] = True
+        self.VX[p_mask] = -spin_dir * p_vel * np.sin(angle)[p_mask]
+        self.VY[p_mask] = spin_dir * p_vel * np.cos(angle)[p_mask]
+        
+        # Electron Shield Track
+        e_mask = np.abs(r - e_rad) < 0.10
+        self.core_mask[e_mask] = True
+        self.VX[e_mask] = -spin_dir * e_vel * np.sin(angle)[e_mask]
+        self.VY[e_mask] = spin_dir * e_vel * np.cos(angle)[e_mask]
+
+    def step_momentum_diffusion(self, passes=60, alpha=0.35):
+        """ Native fluid relaxation: watch the outer electron shields merge! """
+        for _ in range(passes):
+            next_vx = self.VX.copy()
+            next_vy = self.VY.copy()
+            
+            for i in range(1, self.res_y - 1):
+                for j in range(1, self.res_x - 1):
+                    if self.core_mask[i, j]:
+                        continue 
+                        
+                    avg_vx = (self.VX[i+1, j] + self.VX[i-1, j] + self.VX[i, j+1] + self.VX[i, j-1]) * 0.25
+                    avg_vy = (self.VY[i+1, j] + self.VY[i-1, j] + self.VY[i, j+1] + self.VY[i, j-1]) * 0.25
+                    
+                    next_vx[i, j] = (1.0 - alpha) * self.VX[i, j] + alpha * avg_vx
+                    next_vy[i, j] = (1.0 - alpha) * self.VY[i, j] + alpha * avg_vy
+            
+            v_mags = np.sqrt(next_vx**2 + next_vy**2)
+            clamp = v_mags > self.c
+            if np.any(clamp):
+                next_vx[clamp] = (next_vx[clamp] / v_mags[clamp]) * self.c
+                next_vy[clamp] = (next_vy[clamp] / v_mags[clamp]) * self.c
+                
+            self.VX, self.VY = next_vx, next_vy
+
+    def get_pressure_field(self):
+        return 1.0 - (self.VX**2 + self.VY**2)
+
+
+# --- EXECUTE ---
+if __name__ == "__main__":
+    space = SpinPairedBondingFabric(resolution=90)
+    
+    # 1. Atom A: Spin UP (Counter-Clockwise)
+    space.embed_atom(cx=-0.8, cy=0.0, spin_dir=1.0)
+    
+    # 2. Atom B: Spin DOWN (Clockwise)
+    # Positioned so their outer electron boundaries geometrically overlap
+    space.embed_atom(cx=0.8, cy=0.0, spin_dir=-1.0)
+    
+    print("Relaxing substrate to find unified Spin-Paired Ground State...")
+    space.step_momentum_diffusion(passes=85, alpha=0.38)
+    
+    P = space.get_pressure_field()
+    
+    # --- RENDER ---
+    plt.figure(figsize=(14, 9), facecolor='#111116')
+    ax = plt.gca()
+    ax.set_facecolor('#111116')
+    
+    contour = plt.contourf(space.X, space.Y, P, levels=90, cmap='inferno')
+    cbar = plt.colorbar(contour, label='Substrate Hydrostatic Pressure (P)')
+    cbar.ax.yaxis.label.set_color('white'); cbar.ax.tick_params(labelcolor='white')
+    
+    mask = (space.VX**2 + space.VY**2) > 0.005
+    plt.quiver(space.X[mask], space.Y[mask], space.VX[mask], space.VY[mask],
+               color='white', alpha=0.6, scale=28, width=0.002)
+    
+    plt.text(-0.8, 0.5, "Atom A\n(Spin UP / CCW)", color='magenta', fontsize=9, ha='center', fontweight='bold')
+    plt.text(0.8, 0.5, "Atom B\n(Spin DOWN / CW)", color='cyan', fontsize=9, ha='center', fontweight='bold')
+    plt.text(0.0, -0.4, "Constructive Co-Shearing\n(Vacuum Bonding Bridge)", color='lime', fontsize=10, ha='center', fontweight='bold')
+    
+    plt.title("TIR Engine: Deriving Chemical Spin-Pairing via Vector Entrainment (H2 Molecule)", color='white', fontsize=13, pad=15)
+    plt.xlabel("X Substrate Plane", color='white'); plt.ylabel("Y Substrate Plane", color='white')
+    ax.tick_params(colors='white'); ax.set_aspect('equal')
+    plt.grid(color='#222233', linestyle=':', linewidth=0.5)
+    plt.show()
